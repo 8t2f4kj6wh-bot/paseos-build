@@ -1,0 +1,33 @@
+name: Compilar Mis Paseos
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  iphone:
+    runs-on: macos-15
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compilar para iPhone sin firma
+        run: |
+          xcodebuild -project MisPaseos.xcodeproj -target MisPaseos \
+            -configuration Release -sdk iphoneos \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            CONFIGURATION_BUILD_DIR="$RUNNER_TEMP/mispaseos-build" build
+      - name: Empaquetar IPA
+        run: |
+          mkdir Payload
+          ditto "$RUNNER_TEMP/mispaseos-build/MisPaseos.app" Payload/MisPaseos.app
+          test -f Payload/MisPaseos.app/MisPaseos
+          ditto -c -k --keepParent Payload MisPaseos.ipa
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MisPaseos-IPA
+          path: MisPaseos.ipa
+          if-no-files-found: error
+          retention-days: 3
