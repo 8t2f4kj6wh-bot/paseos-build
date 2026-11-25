@@ -1,0 +1,25 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+        A00000000000000000000001 = {isa = PBXProject; buildConfigurationList = A00000000000000000000009; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; knownRegions = (es, Base); mainGroup = A00000000000000000000002; productRefGroup = A00000000000000000000004; projectDirPath = ""; projectRoot = ""; targets = (A00000000000000000000003); };
+        A00000000000000000000002 = {isa = PBXGroup; children = (A00000000000000000000005, A00000000000000000000004); sourceTree = "<group>"; };
+        A00000000000000000000003 = {isa = PBXNativeTarget; buildConfigurationList = A0000000000000000000000A; buildPhases = (A0000000000000000000000B); buildRules = (); dependencies = (); name = MisPaseos; productName = MisPaseos; productReference = A00000000000000000000008; productType = "com.apple.product-type.application"; };
+        A00000000000000000000004 = {isa = PBXGroup; children = (A00000000000000000000008); name = Products; sourceTree = "<group>"; };
+        A00000000000000000000005 = {isa = PBXGroup; children = (A00000000000000000000006, A00000000000000000000007); path = App; sourceTree = "<group>"; };
+        A00000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paseos.swift; sourceTree = "<group>"; };
+        A00000000000000000000007 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        A00000000000000000000008 = {isa = PBXFileReference; explicitFileType = wrapper.application; path = MisPaseos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        A00000000000000000000009 = {isa = XCConfigurationList; buildConfigurations = (A0000000000000000000000D, A0000000000000000000000E); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        A0000000000000000000000A = {isa = XCConfigurationList; buildConfigurations = (A0000000000000000000000F, A00000000000000000000010); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        A0000000000000000000000B = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A0000000000000000000000C); runOnlyForDeploymentPostprocessing = 0; };
+        A0000000000000000000000C = {isa = PBXBuildFile; fileRef = A00000000000000000000006; };
+        A0000000000000000000000D = {isa = XCBuildConfiguration; name = Debug; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = dwarf; }; };
+        A0000000000000000000000E = {isa = XCBuildConfiguration; name = Release; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; SWIFT_COMPILATION_MODE = wholemodule; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; }; };
+        A0000000000000000000000F = {isa = XCBuildConfiguration; name = Debug; buildSettings = { CODE_SIGN_STYLE = Automatic; INFOPLIST_FILE = App/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = app.mispaseos.iphone; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = 1; }; };
+        A00000000000000000000010 = {isa = XCBuildConfiguration; name = Release; buildSettings = { CODE_SIGN_STYLE = Automatic; INFOPLIST_FILE = App/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = app.mispaseos.iphone; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = 1; }; };
+    };
+    rootObject = A00000000000000000000001;
+}
